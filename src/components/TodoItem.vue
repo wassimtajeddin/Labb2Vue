@@ -1,9 +1,9 @@
-<!-- src/components/TodoItem.vue -->
+
 <template>
     <li>
       <input type="checkbox" :checked="todo.completed" @change="toggleTodo" />
       {{ todo.text }}
-      <button @click="remove">Remove</button>
+      <button class="remove-button" @click="remove">Remove</button>
     </li>
   </template>
   
@@ -14,7 +14,6 @@
     },
     methods: {
       toggleTodo() {
-        // Emit an event to request a change to the prop's value
         this.$emit("toggle", this.todo);
       },
       remove() {
@@ -23,4 +22,5 @@
     },
   };
   </script>
+  
   
